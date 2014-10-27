@@ -96,7 +96,7 @@ int getSuma(queue<int> mi_cola)
 //devuelve la suma de los elementos de la lista
 int getSuma(list<int> mi_lista)
 {
-
+//Devuelve la suma de los valores de en frente de la lista los acumula en una variable y los retorna.
    int longit = mi_lista.size();
     int acum = 0;
     for(int i = 0; i < longit;i++)
@@ -110,8 +110,43 @@ int getSuma(list<int> mi_lista)
 //Devuelve true si los elementos de la lista son estan ordenados alfabeticamente, de lo contrario devuelve false
 bool estaOrdenada(list<char>mi_lista)
 {
-    return false;
+    //nt longit = mi_lista.size();
+    //bool ordenada = true;
+
+for(list<char>::iterator i = mi_lista.begin();i!=mi_lista.end();i++)
+    {
+
+	char temp1 = *i;
+	if(i==mi_lista.end())
+	{
+	 	return true;
+	}
+        i++;
+
+
+    if(i==mi_lista.end())
+	{
+	 	return true;
+	}
+        char temp2 = *i;
+        cout<<temp1<<" Mayor que "<<temp2<<endl;
+        if(temp1 > temp2)
+
+            {
+
+
+
+                  return false;
+            }
+
+          i--;
+
+    }
+
+    return true;
 }
+
+
 
 int main ()
 {
