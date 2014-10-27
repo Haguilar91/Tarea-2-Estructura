@@ -116,34 +116,34 @@ bool estaOrdenada(list<char>mi_lista)
 for(list<char>::iterator i = mi_lista.begin();i!=mi_lista.end();i++)
     {
 
-	char temp1 = *i;
-	if(i==mi_lista.end())
+	char temp1 = *i; //elemento actual
+	if(i==mi_lista.end())//verifica si llego al final y para la funcion
 	{
 	 	return true;
 	}
-        i++;
+        i++; //aumenta una posicion
 
 
-    if(i==mi_lista.end())
+    if(i==mi_lista.end())//verfica si llego al final y para la funcion
 	{
 	 	return true;
 	}
-        char temp2 = *i;
+        char temp2 = *i; //valor siguiente
         cout<<temp1<<" Mayor que "<<temp2<<endl;
-        if(temp1 > temp2)
+        if(temp1 > temp2)//Compara el valor actual con el que sigue
 
             {
 
 
 
-                  return false;
+                  return false; //para la funcion porque ya se sabe que esta desordenada y retorna falso
             }
 
           i--;
 
     }
 
-    return true;
+    return true; //como nunca la funcion paro por no cumplir orden esta ordenada.
 }
 
 
